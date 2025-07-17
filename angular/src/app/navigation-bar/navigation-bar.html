@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="navbar-brand" href="/">Živá cesta</a>
+                @if (path === 'shadow') {
+                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="shadow-path">Cesta stínu</a>
+                } @else if (path === 'energy') {
+                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="energy-path">Cesta energie</a>
+                } @else if (path === 'tantra') {
+                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="tantra-path">Cesta tantry</a>
+                } @else if (path === 'elements') {
+                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="elements-path">Cesta živlů</a>
+                }
+            </li>
+        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/massages':'massages'}}">Masáže</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/meditations':'meditations'}}">Meditace</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/events':'events'}}">Kalendář akcí</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Průvodci
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{path ? path + '-path/manu':'manu'}}">Manu</a></li>
+                        <li><a class="dropdown-item" href="{{path ? path + '-path/hakima':'hakima'}}">Hakima</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

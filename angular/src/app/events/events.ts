@@ -1,19 +1,20 @@
-import {Component, inject, signal} from '@angular/core';
-import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
-import {routes} from "./app.routes";
+import {Component, inject} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {NavigationBar} from "../navigation-bar/navigation-bar";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  selector: 'app-events',
+  imports: [
+    NavigationBar
+  ],
+  templateUrl: './events.html',
+  styleUrl: './events.scss'
 })
-export class App {
-  protected readonly title = signal('zivacesta');
-  protected readonly routes = routes;
+export class Events {
+
   private activatedRoute = inject(ActivatedRoute);
 
-  constructor(private router: Router) {
+  constructor() {
     console.log(this.activatedRoute.title)
     console.log(this.activatedRoute.url)
     console.log(this.activatedRoute.params)
@@ -32,12 +33,5 @@ export class App {
       console.log(value);
       console.log(value['path']);
     })
-    this.activatedRoute.queryParams.subscribe(value => {
-      console.log(value);
-    })
-
-    console.log('ulr', router.url);
-    console.log(router);
-
   }
 }
