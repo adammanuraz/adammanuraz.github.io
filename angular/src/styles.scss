@@ -1,13 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
-
-$background-color-living: aliceblue;
-$background-color-shadow: gainsboro;
-$background-color-elements: mediumaquamarine;
-$background-color-tantra: lightcoral;
-$background-color-energy: bisque;
+@import 'variables';
 
 html {
   background-color: $background-color-living;
@@ -20,6 +13,15 @@ html {
     }
   }
 }
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+
+
 .shadow {
   background-color: $background-color-shadow;
 

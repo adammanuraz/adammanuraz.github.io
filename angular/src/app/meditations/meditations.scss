@@ -1,0 +1,13 @@
+@import '../../variables';
+
+.container, .body-content {
+  max-width: $widescreen-max-width;
+
+  .header-picture-container {
+    max-width: $widescreen-max-width;
+
+    img {
+      max-width: $widescreen-max-width;
+    }
+  }
+}

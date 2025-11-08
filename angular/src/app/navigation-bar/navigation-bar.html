@@ -1,17 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-body-tertiary"
+     style="align-self:center; margin:auto">
+    <div class="container-fluid"
+         style="padding: 0">
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="navbar-brand" href="/">Živá cesta</a>
+                <a class="navbar-brand" href="/"><img src="assets/favicon.ico" alt="logo živé cesty" style="width: 22px; vertical-align: text-top;">  Živá cesta</a>
                 @if (path === 'shadow') {
-                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="shadow-path">Cesta stínu</a>
+                    <a class="navbar-brand" style="font-family: cursive; font-size: 21px;" href="shadow-path">Cesta stínu</a>
                 } @else if (path === 'energy') {
-                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="energy-path">Cesta energie</a>
+                    <a class="navbar-brand" style="font-family: cursive; font-size: 21px;" href="energy-path">Cesta energie</a>
                 } @else if (path === 'tantra') {
-                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="tantra-path">Cesta tantry</a>
+                    <a class="navbar-brand" style="font-family: cursive; font-size: 21px;" href="tantra-path">Cesta tantry</a>
                 } @else if (path === 'elements') {
-                    <a class="navbar-brand" style="font-family: cursive; font-size: larger; margin-right: 500px;" href="elements-path">Cesta živlů</a>
+                    <a class="navbar-brand" style="font-family: cursive; font-size: 21px;" href="elements-path">Cesta živlů</a>
                 }
             </li>
         </ul>
@@ -19,7 +21,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"
+                style="margin: 0px 0px 0px auto !important;">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/massages':'massages'}}">Masáže</a>
                 </li>

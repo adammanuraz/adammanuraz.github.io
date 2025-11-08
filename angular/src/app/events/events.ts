@@ -1,6 +1,7 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnDestroy} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {NavigationBar} from "../navigation-bar/navigation-bar";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-events',
@@ -10,28 +11,19 @@ import {NavigationBar} from "../navigation-bar/navigation-bar";
   templateUrl: './events.html',
   styleUrl: './events.scss'
 })
-export class Events {
+export class Events implements OnDestroy {
+  protected path = '';
 
   private activatedRoute = inject(ActivatedRoute);
+  mySubscription: Subscription;
 
   constructor() {
-    console.log(this.activatedRoute.title)
-    console.log(this.activatedRoute.url)
-    console.log(this.activatedRoute.params)
-    console.log(this.activatedRoute.component)
+    this.mySubscription = this.activatedRoute.data.subscribe(value => {
+      this.path = value['path'] ?? '';
+    })
+  }
 
-    this.activatedRoute.url.subscribe(value => {
-      console.log(value);
-    })
-    this.activatedRoute.params.subscribe(value => {
-      console.log(value);
-    })
-    this.activatedRoute.title.subscribe(value => {
-      console.log(value);
-    })
-    this.activatedRoute.data.subscribe(value => {
-      console.log(value);
-      console.log(value['path']);
-    })
+  ngOnDestroy() {
+    this.mySubscription.unsubscribe();
   }
 }

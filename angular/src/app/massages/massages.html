@@ -1,3 +1,33 @@
 <app-navigation-bar></app-navigation-bar>
 
-<p>massages works!</p>
+<div class="container body-content" style="padding:0; width:auto; margin:0 auto">
+
+    <div class="header-picture-container" style="width:100%; overflow:hidden">
+        @if (path === 'shadow') {
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/shadow-massage.jpg">
+        }
+    </div>
+
+    <div class="basic-text-padding">
+
+        @if (path === 'shadow') {
+            <div style="text-align:center">
+                <h1>Masáže ve stínech</h1>
+                <h3 style="margin-top:-7px; margin-bottom:20px">dovol si projevit své nejskrytější touhy</h3>
+            </div>
+        } @else {
+            <div style="text-align:center">
+                <h1>Masáže na Živé cestě</h1>
+                <h3 style="margin-top:-7px; margin-bottom:20px">...</h3>
+            </div>
+        }
+        <p style="padding-bottom:10px">
+            Hledáš způsob, jak...
+
+        </p>
+
+
+    </div>
+
+</div>
+

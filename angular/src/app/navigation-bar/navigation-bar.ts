@@ -14,7 +14,6 @@ export class NavigationBar {
 
   constructor() {
     this.activatedRoute.data.subscribe(value => {
-      console.log(value['path']);
       let htmlClassList = document.querySelector('html')?.classList
       if (this.path) {
         htmlClassList?.remove(this.path);
