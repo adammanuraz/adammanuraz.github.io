@@ -1,2 +1,33 @@
 
+.ziva-footer {
+  background-color: #EDE8E3; /* living path secondary */
+  color: #2E2E2E;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
 
+.footer-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #2E2E2E;
+}
+
+.footer-link {
+  color: #7C4A0B; /* warm link accent */
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-link:hover {
+  color: #E8A43D; /* golden hover */
+}
+
+.footer-copy {
+  color: #5E5E5E;
+}

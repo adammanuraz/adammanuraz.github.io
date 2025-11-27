@@ -11,3 +11,168 @@
     }
   }
 }
+//
+//:root{
+//  /* Cesta stínu */
+//  --shadow-primary: #585858;
+//  --shadow-accent: #8A8C91;
+//  --shadow-light: #E3E3E3;
+//  --shadow-dark: #2B2B2B;
+//
+//  /* Cesta živlů */
+//  --element-primary: #4E8C5A;
+//  --element-accent: #7DB892;
+//  --element-light: #E5F0E7;
+//  --element-dark: #2E4633;
+//
+//  /* Cesta tantry */
+//  --tantra-primary: #B23A48;
+//  --tantra-accent: #E85A4F;
+//  --tantra-light: #F9E3E1;
+//  --tantra-dark: #601A22;
+//
+//  /* Cesta energie */
+//  --energy-primary: #E8A43D;
+//  --energy-accent: #FFD166;
+//  --energy-light: #FFF4E1;
+//  --energy-dark: #7C4A0B;
+//
+//  /* Living Path (univerzální) */
+//  --living-bg: #FAF8F5;
+//  --living-sub: #EDE8E3;
+//  --text-dark: #2E2E2E;
+//  --subtext: #5E5E5E;
+//}
+//
+//body {
+//  background-color: var(--living-bg);
+//  color: var(--text-dark);
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
+//  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+//}
+//
+///* ---------- Layout ---------- */
+//.hero {
+//  padding: 3.5rem 1rem;
+//  text-align: center;
+//}
+//
+//.hero .lead {
+//  color: var(--subtext);
+//  max-width: 780px;
+//  margin: 0 auto 1.25rem;
+//}
+//
+//.grid {
+//  padding: 1.25rem;
+//}
+//
+//.card-block {
+//  border-radius: 14px;
+//  color: #fff;
+//  padding: 2rem;
+//  min-height: 240px;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+//  transition: transform 0.28s cubic-bezier(.2,.9,.3,1), box-shadow 0.28s;
+//  overflow: hidden;
+//}
+//
+//.card-block:hover {
+//  transform: translateY(-6px) scale(1.01);
+//  box-shadow: 0 18px 38px rgba(0,0,0,0.14);
+//}
+//
+//.card-title {
+//  font-weight: 700;
+//  letter-spacing: 0.2px;
+//  font-size: 1.6rem;
+//  margin-bottom: .4rem;
+//}
+//
+//.card-desc {
+//  opacity: 0.95;
+//  line-height: 1.35;
+//  font-size: 0.975rem;
+//  margin-bottom: 1.15rem;
+//}
+//
+//.card-cta {
+//  align-self: flex-start;
+//}
+
+/* ---------- Specifické barvy pro cesty ---------- */
+.cesta-stinu {
+  background: linear-gradient(160deg, var(--shadow-primary) 0%, #676767 100%);
+  color: #fff; /* bílý text pro kontrast */
+}
+.cesta-stinu .card-sub {
+  color: rgba(255,255,255,0.85);
+}
+.cesta-stinu a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-stinu a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-zivlu {
+  background: linear-gradient(160deg, var(--element-primary) 0%, #3E877A 100%);
+  color: #fff;
+}
+.cesta-zivlu a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-zivlu a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-tantry {
+  background: linear-gradient(160deg, var(--tantra-primary) 0%, #97323B 100%);
+  color: #fff;
+}
+.cesta-tantry a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-tantry a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-energie {
+  background: linear-gradient(160deg, var(--energy-primary) 0%, #DA8E2D 100%);
+  color: #2B2B2B; /* tmavý text na světlé teplé barvě */
+}
+.cesta-energie .card-desc, .cesta-energie .card-title {
+  color: #2B2B2B;
+}
+.cesta-energie a.btn {
+  background: rgba(43,43,43,0.06);
+  color: var(--energy-dark);
+  border: 1px solid rgba(43,43,43,0.06);
+}
+.cesta-energie a.btn:hover {
+  background: var(--energy-accent);
+  color: #2B2B2B;
+}
+
+/* ---------- Link styling per path (small utility classes) ---------- */
+.links-shadow a { color: #8A8C91; text-decoration: underline; }
+.links-shadow a:hover { color: #B0B2B6; }
+
+.links-zivlu a { color: var(--element-accent); }
+.links-zivlu a:hover { color: #A8D1B5; }
+
+.links-tantry a { color: var(--tantra-accent); }
+.links-tantry a:hover { color: #FF7B6A; }
+
+.links-energie a { color: var(--energy-primary); }
+.links-energie a:hover { color: var(--energy-accent); }
+
+/* ---------- Responsivita a drobnosti ---------- */
+@media (max-width: 575.98px){
+  .card-block { padding: 1.25rem; min-height: 200px; }
+  .card-title { font-size: 1.35rem; }
+}

@@ -4,8 +4,14 @@
 
     <div class="header-picture-container" style="width:100%; overflow:hidden">
         @if (path === 'shadow') {
-            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/shadow-massage.jpg">
-        }
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/shadow-path.webp">
+        } @else if (path === 'tantra') {
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/tantra-massage.png">
+        } @else if (path === 'elements') {
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/shamanic-massage.png">
+        } @else {
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/massages.png">
+    }
     </div>
 
     <div class="basic-text-padding">
@@ -15,16 +21,138 @@
                 <h1>Masáže ve stínech</h1>
                 <h3 style="margin-top:-7px; margin-bottom:20px">dovol si projevit své nejskrytější touhy</h3>
             </div>
+        } @else if (path === 'tantra') {
+            <div style="text-align:center">
+                <h1>Tantrické masáže</h1>
+                <h3 style="margin-top:-7px; margin-bottom:20px">celotělové propojení a oživení sexuální energie</h3>
+            </div>
+        } @else if (path === 'elements') {
+            <div style="text-align:center">
+                <h1>Šamanské masáže</h1>
+                <h3 style="margin-top:-7px; margin-bottom:20px">propojení s živly a uzemnění v tomto světě</h3>
+            </div>
         } @else {
             <div style="text-align:center">
                 <h1>Masáže na Živé cestě</h1>
-                <h3 style="margin-top:-7px; margin-bottom:20px">...</h3>
+                <h3 style="margin-top:-7px; margin-bottom:20px">objevujte skrze péči o sebe...</h3>
             </div>
         }
-        <p style="padding-bottom:10px">
-            Hledáš způsob, jak...
 
-        </p>
+        <main class="cards-grid">
+            <div class="container">
+                <div class="row g-3">
+                    @if (path === '' || path === 'tantra') {
+
+                    <!-- Tantrická masáž pro muže -->
+                    <div class="col-12">
+                        <a href="/tantra-path/tantra-massage-man" class="massage-card mc-tantra-soft" aria-label="Tantrická masáž pro muže — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <img src="./assets/tantra-massage-mini.png" alt="Ilustrace: tantrická masáž pro muže">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Tantrická masáž pro muže</h3>
+                                    <p class="mc-desc">Hluboce uvolňující, pečující a smyslná masáž, která skrze vědomý dotek vede do stavu, kdy tělo ožívá novou energií. Součástí je celotělová olejová masáž včetně masáže lingamu pro potěšení. </p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Tantrická masáž pro ženu -->
+                    <div class="col-12">
+                        <a href="/tantra-path/tantra-massage-woman" class="massage-card mc-tantra" aria-label="Tantrická masáž pro ženu — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <!-- Placeholder image nebo skutečný obrázek -->
+                                    <img src="./assets/tantra-massage-woman.png" alt="Ilustrace: tantrická masáž pro ženu">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Tantrická masáž pro ženu</h3>
+                                    <p class="mc-desc">Jemná, pečující a respektující smyslná masáž zaměřená na probuzení těla, vnímání energie a oživení vnitřní ženské vitality. Součástí je celotělová olejová masáž včetně potěšující masáže jóni.</p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Manu / Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    }
+
+                    @if (path === '' || path === 'shadow') {
+                    <!-- Dominantní masáž pro muže -->
+                    <div class="col-12">
+                        <a href="/shadow-path/dominant-massage-man" class="massage-card mc-dominant" aria-label="Dominantní masáž pro muže — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <img src="./assets/shadow-path.webp" alt="Ilustrace: dominantní masáž pro muže">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Dominantní masáž pro muže</h3>
+                                    <p class="mc-desc">Masáž, která se odvažuje za běžné hranice a vede k transformujícímu prožitku blaženého odevzdání se. Vhodné pro tebe, kdo hledáš intenzitu a chtěl bys zažít vzrušující pocit ztráty kontroly.</p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 900 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Dominantní masáž pro ženu -->
+                    <div class="col-12">
+                        <a href="/shadow-path/dominant-massage-woman" class="massage-card mc-dominant" aria-label="Dominantní masáž pro ženu — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <img src="./assets/shadow-massage.jpg" alt="Ilustrace: dominantní masáž pro ženu">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Dominantní masáž pro ženu</h3>
+                                    <p class="mc-desc">Masáž, při které zkoumáš intenzitu prožívání a kdy se můžeš bezpečně vydat za hranice, kam se běžně neodvažuješ. Transformativní zážitek blaženého vzdání se kontroly a prohloubení vlastní síly</p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 900 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Manu / Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    }
+
+                    @if (path === '' || path === 'elements') {
+                    <!-- Šamanská masáž (Oceanic Bodywork – Fire & Earth) -->
+                    <div class="col-12">
+                        <a href="/elements-path/shamanic-massage" class="massage-card mc-shamanic" aria-label="Šamanská masáž Oceanic Bodywork — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <img src="./assets/shamanic-massage.png" alt="Ilustrace: šamanská masáž Oceanic Bodywork">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Šamanská masáž — Oceanic Bodywork (Fire & Earth)</h3>
+                                    <p class="mc-desc">Holistická celotělová masáž vycházející z havajské chrámové masáže a inspirovaná Oshem. Svou jedinečnou dynamikou a hloubkou přináší stabilitu jádra, uzemění, radost a vnitřní mír.</p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    }
+                </div>
+            </div>
+        </main>
 
 
     </div>

@@ -23,22 +23,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0"
                 style="margin: 0px 0px 0px auto !important;">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/massages':'massages'}}">Masáže</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/meditations':'meditations'}}">Meditace</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/events':'events'}}">Kalendář akcí</a>
-                </li>
+                @if (!path || path === 'shadow' || path === 'elements' || path === 'tantra') {
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/massages':'massages'}}">Masáže</a>
+                    </li>
+                }
+<!--                @if (!path || path === 'elements' || path === 'energy') {-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/meditations':'meditations'}}">Meditace</a>-->
+<!--                    </li>-->
+<!--                }-->
+                @if (!path || path === 'energy') {
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/events':'events'}}">Kalendář akcí</a>
+                    </li>
+                }
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Průvodci
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{path ? path + '-path/manu':'manu'}}">Manu</a></li>
-                        <li><a class="dropdown-item" href="{{path ? path + '-path/hakima':'hakima'}}">Hakima</a></li>
+
+                        @if (!path || path === 'shadow' || path === 'elements' || path === 'tantra') {
+                            <li><a class="dropdown-item" href="{{path ? path + '-path/hakima':'hakima'}}">Hakima</a></li>
+                        }
                     </ul>
                 </li>
             </ul>

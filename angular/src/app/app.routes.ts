@@ -4,7 +4,6 @@ import {AumMeditation} from "./meditations/aum-meditation/aum-meditation";
 import {LivingMeditations} from "./meditations/living-meditations/living-meditations";
 import {Events} from "./events/events";
 import {ShadowPath} from "./path-homepages/shadow-path/shadow-path";
-import {ShadowTouch} from "./massages/shadow-touch/shadow-touch";
 import {TantraPath} from "./path-homepages/tantra-path/tantra-path";
 import {EnergyPath} from "./path-homepages/energy-path/energy-path";
 import {ElementsPath} from "./path-homepages/elements-path/elements-path";
@@ -12,16 +11,17 @@ import {Manu} from "./about-us/manu/manu";
 import {Hakima} from "./about-us/hakima/hakima";
 import {Massages} from "./massages/massages";
 import {Meditations} from "./meditations/meditations";
+import {DominantMassageMan} from "./massages/dominant-massage-man/dominant-massage-man";
+import {DominantMassageWoman} from "./massages/dominant-massage-woman/dominant-massage-woman";
+import {TantraMassageMan} from "./massages/tantra-massage-man/tantra-massage-man";
+import {TantraMassageWoman} from "./massages/tantra-massage-woman/tantra-massage-woman";
+import {ShamanicMasssage} from "./massages/shamanic-masssage/shamanic-masssage";
 
 export const routes: Routes = [
     {
         path: '',
         component: HomePage,
         title: 'Živá cesta'
-    },
-    {
-        path: 'living-aum-meditation',
-        component: AumMeditation,
     },
     {
         path: 'events',
@@ -40,7 +40,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: ShadowPath,
+                component: Massages,
             },
             {
                 path: 'manu',
@@ -61,6 +61,14 @@ export const routes: Routes = [
             {
                 path: 'events',
                 component: Events
+            },
+            {
+                path: 'dominant-massage-man',
+                component: Massages
+            },
+            {
+                path: 'dominant-massage-woman',
+                component: Massages
             }
         ],
         data: { path: 'shadow' }
@@ -70,7 +78,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: TantraPath,
+                component: Massages,
             },
             {
                 path: 'manu',
@@ -91,6 +99,14 @@ export const routes: Routes = [
             {
                 path: 'events',
                 component: Events
+            },
+            {
+                path: 'tantra-massage-man',
+                component: Massages
+            },
+            {
+                path: 'tantra-massage-woman',
+                component: Massages
             }
         ],
         data: { path: 'tantra' }
@@ -100,7 +116,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: EnergyPath,
+                component: Events,
+            },
+            {
+                path: 'living-aum-meditation',
+                component: AumMeditation,
             },
             {
                 path: 'manu',
@@ -134,7 +154,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: ElementsPath,
+                component: Massages,
             },
             {
                 path: 'manu',
@@ -155,6 +175,10 @@ export const routes: Routes = [
             {
                 path: 'events',
                 component: Events
+            },
+            {
+                path: 'shamanic-massage',
+                component: Massages
             }
         ],
         data: { path: 'elements' }

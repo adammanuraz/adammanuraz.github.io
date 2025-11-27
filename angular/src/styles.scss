@@ -2,14 +2,47 @@
 
 @import 'variables';
 
+// Living Path (default)
+$link-color: #7C4A0B;         // teplá jantarová
+$link-hover: #E8A43D;         // zlatý akcent
+$link-active: #B23A48;        // jemný červený dotek
+$link-visited: #5E5E5E;       // neutrální šedá
+
+
+
 html {
+  height: 100%;
   background-color: $background-color-living;
+  color: $primary-color-living;
 
   body {
+    height: auto;
+    min-height: 100%;
     background-color: $background-color-living;
-
     nav {
       background-color: $background-color-living !important;
+    }
+  }
+
+  nav {
+    background-color: inherit !important;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $link-hover;
+    }
+
+    &:active {
+      color: $link-active;
+    }
+
+    &:visited {
+      color: $link-color;
     }
   }
 }
@@ -24,55 +57,160 @@ html {
 
 .shadow {
   background-color: $background-color-shadow;
+  color: $primary-color-shadow;
+
+  h3 {
+    color: $accent-color-shadow;
+  }
 
   body {
-    background-color: $background-color-shadow;
-
+    background: linear-gradient(
+                    180deg,
+                    $background-color-shadow 0%,
+                    $background-color-dark-shadow 200%
+    );
     nav {
       background-color: $background-color-shadow !important;
     }
   }
+
+  $link-color: #7A7C71;       // studený kovový tón
+  $link-hover: #505256;       // světlejší pro jemné zvýraznění
+  $link-active: #585858;      // ztělesnění hloubky
+  $link-visited: #444444;     // lehce temnější neutrální
+
+  a {
+    color: $link-color;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+
+    &:hover {
+      color: $link-hover;
+      text-decoration-color: rgba(176, 178, 182, 0.8);
+    }
+
+    &:active {
+      color: $link-active;
+    }
+
+    &:visited {
+      color: $link-visited;
+    }
+  }
 }
 .elements {
-  background-color: $background-color-elements;
-
+  color: $primary-color-elements;
   body {
-    background-color: $background-color-elements;
+    //background-color: $background-color-elements;
+    background: linear-gradient(
+                    180deg,
+                    $background-color-elements 0%,
+                    $background-color-dark-elements 200%
+    );
 
     nav {
       background-color: $background-color-elements !important;
     }
+
+    $link-color: #4E8C5A;       // základní lesní zelená
+    $link-hover: #7DB892;       // svěží mátová
+    $link-active: #2E4633;      // tmavší, uzemněná
+    $link-visited: #5C7A63;     // tlumená přírodní
+
+    a {
+      color: $link-color;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $link-hover;
+        border-bottom-color: rgba(125, 184, 146, 0.6);
+      }
+
+      &:active {
+        color: $link-active;
+      }
+
+      &:visited {
+        color: $link-visited;
+      }
+    }
   }
 }
 .energy {
-  background-color: $background-color-energy;
-
+  color: $primary-color-energy;
   body {
-    background-color: $background-color-energy;
+    background: linear-gradient(
+                  180deg,
+                  $background-color-energy 0%,
+                  $background-color-dark-energy 200%
+  );
 
     nav {
       background-color: $background-color-energy !important;
     }
+
+    $link-color: #D95D39;       // hlavní zlatá
+    $link-hover: #FFD166;       // světlejší zlatá
+    $link-active: #D95D39;      // tmavě jantarová
+    $link-visited: #D95D39;     // medový tón
+
+    a {
+      color: $link-color;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $link-hover;
+      }
+
+      &:active {
+        color: $link-active;
+      }
+
+      &:visited {
+        color: $link-visited;
+      }
+    }
   }
 }
 .tantra {
-  background-color: $background-color-tantra;
+  color: $primary-color-tantra !important;
 
   body {
-    background-color: $background-color-tantra;
+    background: linear-gradient(
+                    180deg,
+                    $background-color-tantra 0%,
+                    $background-color-dark-tantra 200%
+    );
 
     nav {
       background-color: $background-color-tantra !important;
     }
+
+    $link-color: #B23A48; // hlavní smyslná červená
+    $link-hover: #E85A4F; // živější korálová
+    $link-active: #601A22; // tmavé víno
+    $link-visited: #8A2C36; // hlubší tón
+
+    a {
+      color: $link-color;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $link-hover;
+        border-bottom-color: rgba(232, 90, 79, 0.8);
+      }
+
+      &:active {
+        color: $link-active;
+      }
+
+      &:visited {
+        color: $link-visited;
+      }
+    }
   }
 }
 
-a {
-  color: #F57C00;
-}
-a:hover {
-  color: #D95D39;
-}
+
 button.mybtn{
   color: white;
   background-color: #4CAF50;
@@ -125,7 +263,6 @@ img.personal-photo {
 
 .flex-footer-container {
   display: flex;
-  flex-wrap: wrap;
   align-content:center;
   align-self: center;
 }
@@ -151,3 +288,260 @@ body {
 /*"border_color": "#BDBDBD",      # Soft gray for subtle borders*/
 /*"background_color": "#FFFFFF"   # White for the page background*/
 /*}*/
+
+:root{
+  /* Cesta stínu */
+  --shadow-primary: #585858;
+  --shadow-accent: #8A8C91;
+  --shadow-light: #E3E3E3;
+  --shadow-dark: #2B2B2B;
+
+  /* Cesta živlů */
+  --element-primary: #4E8C5A;
+  --element-accent: #7DB892;
+  --element-light: #E5F0E7;
+  --element-dark: #2E4633;
+
+  /* Cesta tantry */
+  --tantra-primary: #B23A48;
+  --tantra-accent: #E85A4F;
+  --tantra-light: #F9E3E1;
+  --tantra-dark: #601A22;
+
+  /* Cesta energie */
+  --energy-primary: #E8A43D;
+  --energy-accent: #FFD166;
+  --energy-light: #FFF4E1;
+  --energy-dark: #7C4A0B;
+
+  /* Living Path (univerzální) */
+  --living-bg: #FAF8F5;
+  --living-sub: #EDE8E3;
+  --text-dark: #2E2E2E;
+  --subtext: #5E5E5E;
+}
+
+body {
+  background-color: var(--living-bg);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* ---------- Layout ---------- */
+.hero {
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+.hero .lead {
+  color: var(--subtext);
+  max-width: 780px;
+  margin: 0 auto 1.25rem;
+}
+
+.grid {
+  padding: 1.25rem;
+}
+
+.card-block {
+  border-radius: 14px;
+  color: #fff;
+  padding: 2rem;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 0.28s cubic-bezier(.2,.9,.3,1), box-shadow 0.28s;
+  overflow: hidden;
+}
+
+.card-block:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.14);
+}
+
+.card-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-size: 1.6rem;
+  margin-bottom: .4rem;
+}
+
+.card-desc {
+  opacity: 0.95;
+  line-height: 1.35;
+  font-size: 0.975rem;
+  margin-bottom: 1.15rem;
+}
+
+.card-cta {
+  align-self: flex-start;
+}
+
+/* ---------- Specifické barvy pro cesty ---------- */
+.cesta-stinu {
+  background: linear-gradient(160deg, var(--shadow-primary) 0%, #676767 100%);
+  color: #fff; /* bílý text pro kontrast */
+}
+.cesta-stinu .card-sub {
+  color: rgba(255,255,255,0.85);
+}
+.cesta-stinu a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-stinu a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-zivlu {
+  background: linear-gradient(160deg, var(--element-primary) 0%, #3E877A 100%);
+  color: #fff;
+}
+.cesta-zivlu a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-zivlu a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-tantry {
+  background: linear-gradient(160deg, var(--tantra-primary) 0%, #97323B 100%);
+  color: #fff;
+}
+.cesta-tantry a.btn {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cesta-tantry a.btn:hover { background: rgba(255,255,255,0.18); }
+
+.cesta-energie {
+  background: linear-gradient(160deg, var(--energy-primary) 0%, #DA8E2D 100%);
+  color: #2B2B2B; /* tmavý text na světlé teplé barvě */
+}
+.cesta-energie .card-desc, .cesta-energie .card-title {
+  color: #2B2B2B;
+}
+.cesta-energie a.btn {
+  background: rgba(43,43,43,0.06);
+  color: var(--energy-dark);
+  border: 1px solid rgba(43,43,43,0.06);
+}
+.cesta-energie a.btn:hover {
+  background: var(--energy-accent);
+  color: #2B2B2B;
+}
+
+/* ---------- Link styling per path (small utility classes) ---------- */
+.links-shadow a { color: #8A8C91; text-decoration: underline; }
+.links-shadow a:hover { color: #B0B2B6; }
+
+.links-zivlu a { color: var(--element-accent); }
+.links-zivlu a:hover { color: #A8D1B5; }
+
+.links-tantry a { color: var(--tantra-accent); }
+.links-tantry a:hover { color: #FF7B6A; }
+
+.links-energie a { color: #D95D39 }
+.links-energie a:hover { color: var(--energy-accent); }
+
+/* ---------- Responsivita a drobnosti ---------- */
+@media (max-width: 575.98px){
+  .card-block { padding: 1.25rem; min-height: 200px; }
+  .card-title { font-size: 1.35rem; }
+}
+
+
+
+:root{
+  --shadow-primary: #585858;
+  --element-primary: #4E8C5A;
+  --tantra-primary: #B23A48;
+  --energy-primary: #E8A43D;
+
+  --living-bg: #FAF8F5;
+  --text-dark: #2E2E2E;
+}
+
+body {
+  background-color: var(--living-bg);
+  color: var(--text-dark);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.hero { padding: 3rem 1rem; text-align:center; }
+.grid { padding: 1.25rem; }
+
+/* celé karty jako odkazy */
+.card-link {
+  display: block;
+  border-radius: 14px;
+  color: inherit;
+  text-decoration: none;
+  padding: 1.5rem;
+  min-height: 220px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: transform 0.28s cubic-bezier(.2,.9,.3,1), box-shadow 0.28s;
+  overflow: hidden;
+  position: relative;
+}
+.card-link:focus {
+  outline: 3px solid rgba(255,255,255,0.18);
+  outline-offset: 4px;
+}
+.card-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.12);
+}
+
+/* layout obsahu v kartě */
+.card-inner {
+  display:flex;
+  gap: 1rem;
+  align-items: center;
+  height:100%;
+}
+.card-icon {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  box-shadow: inset 0 2px 6px rgba(255,255,255,0.03);
+}
+.card-icon svg { width: 58px; height: 58px; display:block; }
+
+.card-content { flex: 1 1 auto; display:flex; flex-direction:column; justify-content:space-between; min-height:88px; }
+.card-title { font-weight:700; margin:0 0 .25rem; font-size:1.25rem; }
+.card-desc { margin:0; opacity:0.95; line-height:1.35; }
+.card-meta { font-size:0.9rem; opacity:0.85; margin-top: .6rem; }
+
+/* specifické barvy + ikony barevně pomocí currentColor */
+.cesta-stinu { background: linear-gradient(160deg, var(--shadow-primary) 0%, #676767 100%); color: #fff; }
+.cesta-stinu .card-icon { background: rgba(255,255,255,0.06); }
+.cesta-stinu .card-icon svg { color: #FFFFFF; fill: currentColor; opacity:0.95; }
+
+.cesta-zivlu { background: linear-gradient(160deg, var(--element-primary) 0%, #3E877A 100%); color: #fff; }
+.cesta-zivlu .card-icon { background: rgba(255,255,255,0.06); }
+.cesta-zivlu .card-icon svg { color: #FFFFFF; fill: currentColor; opacity:0.95; }
+
+.cesta-tantry { background: linear-gradient(160deg, var(--tantra-primary) 0%, #97323B 100%); color: #fff; }
+.cesta-tantry .card-icon { background: rgba(255,255,255,0.06); }
+.cesta-tantry .card-icon svg { color: #FFFFFF; fill: currentColor; opacity:0.95; }
+
+.cesta-energie { background: linear-gradient(160deg, var(--energy-primary) 0%, #DA8E2D 100%); color: #2B2B2B; }
+.cesta-energie .card-icon { background: rgba(255,255,255,0.12); }
+.cesta-energie .card-icon svg { color: #2B2B2B; fill: currentColor; opacity:0.95; }
+
+/* responsivita */
+@media (max-width: 575.98px){
+  .card-inner { flex-direction: row; gap: .75rem; }
+  .card-icon { width:72px; height:72px; flex:0 0 72px; }
+  .card-icon svg { width:46px; height:46px; }
+  .card-title { font-size:1.05rem; }
+}

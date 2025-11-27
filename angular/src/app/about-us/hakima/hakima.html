@@ -4,9 +4,15 @@
 
     <div class="basic-text-padding">
         <h2>Nina Hakima Rážová </h2>
-        <img class="personal-photo" src="./assets/Hakima.jpeg" alt="Manu_240x270" width="250px">
-        <p>
-            ...můj popisek...
+        @if (path === 'shadow') {
+            <img class="personal-photo" src="./assets/Hakima-shadow.jpeg" alt="Hakima" width="250px">
+        } @else {
+
+            <img class="personal-photo" src="./assets/Hakima.jpg" alt="Hakima" width="250px">
+        }
+        <p>Můžete si u mě domluvit <a href="../tantra-path/tantra-massage-woman">tantrickou masáž</a>,
+            <a href="../shadow-path/dominant-massage-woman">dominantní masáž</a> anebo
+            <a href="../elements-path/shamanic-massage">šamanskou masáž</a>.
         </p>
 
         <p>Aktuální výcviky
@@ -16,6 +22,7 @@
         </ul>
         <p>Dokončené výcviky a semináře:
         <ul>
+            <li>(2025) Kurz <a href="https://www.mandalam.cz/tao-coaching-pro-pary/" target="_blank">TAO smyslné masáže</a> s Jitkou Mandalam</li>
             <li>(2024-2025) Výcvik <a href="https://www.oceanicbodywork.com/Home/Products#Modal" target="_blank">Oceanic bodywork Fire & Earth</a> s Nirvano</li>
             <li>(2025) Transformace stínu do životní síly a osobní svobody v rámci <a href="https://www.umenimilovani.cz/erotika-bdsm-a-temny-eros/" target="_blank">umění milování</a> u&nbsp;Jana Komedy a Marie Koudelkové</li>
             <li>(2024) <a href="https://dianavera.com/event/certifikovany-vycvik-shibari-session/" target="_blank">Shibari session</a> - I. blok od Diany Very</li>
