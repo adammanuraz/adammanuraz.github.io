@@ -1,9 +1,11 @@
 import {Component, inject, Input} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-navigation-bar',
-  imports: [],
+    imports: [
+        RouterLink
+    ],
   templateUrl: './navigation-bar.html',
   styleUrl: './navigation-bar.scss'
 })

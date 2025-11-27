@@ -43,7 +43,7 @@
                         Průvodci
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{path ? path + '-path/manu':'manu'}}">Manu</a></li>
+                        <li><a class="dropdown-item" routerLink="/{{path ? path + '-path/manu':'manu'}}">Manu</a></li>
 
                         @if (!path || path === 'shadow' || path === 'elements' || path === 'tantra') {
                             <li><a class="dropdown-item" href="{{path ? path + '-path/hakima':'hakima'}}">Hakima</a></li>
