@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Přesměrování</title>
+</head>
+<body>
+  <p>Stránka nebyla nalezena. Probíhá přesměrování na hlavní stránku aplikace...</p>
+  <p>Pokud se nic nestane, klikněte <a id="homeLink" href="/">zde</a>.</p>
+
+  <script>
+    // Předpoklad: repozitář nasazený jako projektová stránka na GitHub Pages
+    // (název repo: adammanuraz.github.io). Pokud používáte jiný název repozitáře,
+    // upravte proměnnou `repo` níže (nebo odstraňte část s repo pokud je to user page).
+    (function () {
+      var repo = '/adammanuraz.github.io'; // <-- upravte dle potřeby
+
+      // Sestavíme původní cestu včetně query a hashe
+      var path = window.location.pathname + window.location.search + window.location.hash;
+
+      // Pokud je cesta jen root, přesměrujeme na root aplikace
+      if (!path || path === '/' ) {
+        var r = window.location.protocol + '//' + window.location.host + repo + '/';
+        window.location.replace(r);
+        return;
+      }
+
+      // Přesměrování na hash-based URL tak, aby Angular mohl zpracovat routing
+      // Výsledkem bude např. https://<host>/adammanuraz.github.io/#/manu
+      var redirect = window.location.protocol + '//' + window.location.host + repo + '/#' + path;
+
+      // Nastavíme také odkaz pro případ, že JS replace bude zablokován
+      var a = document.getElementById('homeLink');
+      if (a) a.href = repo + '/#' + path;
+
+      // Provedeme přesměrování
+      window.location.replace(redirect);
+    })();
+  </script>
+</body>
+</html>
+
