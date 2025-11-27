@@ -1,5 +1,62 @@
-<script>
-    var redirect = window.location.protocol + '//' + window.location.host + '/zivacesta.cz/#' + window.location.pathname;
-    window.location.replace(redirect);
-</script>
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Přesměrování</title>
+</head>
+<body>
+  <p>Stránka nebyla nalezena. Probíhá přesměrování na hlavní stránku aplikace...</p>
+  <p>Pokud se nic nestane, klikněte <a id="homeLink" href="/">zde</a>.</p>
 
+  <script>
+    // Automatické určení "repo" prefixu a zachování query/hash
+    (function () {
+      var pathname = window.location.pathname || '/';
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      var hostOrigin = window.location.protocol + '//' + window.location.host;
+
+      // Rozbijeme cestu na segmenty (bez prázdných)
+      var segments = pathname.split('/').filter(function(s){ return s.length > 0; });
+
+      // Pokud host končí na github.io, první segment obvykle obsahuje jméno repozitáře
+      var repoPrefix;
+      var remainingPath;
+
+      if (segments.length > 0 && (window.location.hostname.endsWith('.github.io') || window.location.hostname === 'localhost')) {
+        repoPrefix = '/' + segments[0];
+        // Odebereme repoPrefix z pathname, abychom dostali path, která má jít za #
+        remainingPath = pathname.slice(repoPrefix.length) || '/';
+      } else {
+        // Jinak předpokládáme, že aplikace je nasazena na root domény nebo má base href nastavený na '/'
+        repoPrefix = '';
+        remainingPath = pathname || '/';
+      }
+
+      // Ujistíme se, že za # bude cesta s počátečním '/'
+      if (!remainingPath.startsWith('/')) {
+        remainingPath = '/' + remainingPath;
+      }
+
+      // Sestavíme finální URL: host + repoPrefix + '/#' + remainingPath + search + hash
+      var redirectUrl = hostOrigin + repoPrefix + '/#' + remainingPath + search + hash;
+
+      // Aktualizujeme pomocný odkaz pro případ, že přesměrování selže
+      var a = document.getElementById('homeLink');
+      if (a) a.href = repoPrefix + '/#' + remainingPath + search + hash;
+
+      // Pokud už jsme na cílové URL (může nastat, pokud už URL obsahuje #), nedělej nic
+      try {
+        var current = window.location.href;
+        if (current !== redirectUrl) {
+          window.location.replace(redirectUrl);
+        }
+      } catch (e) {
+        // V nouzi proveďme klasický replace bez kontroly
+        window.location.replace(redirectUrl);
+      }
+    })();
+  </script>
+</body>
+</html>
