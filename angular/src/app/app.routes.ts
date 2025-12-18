@@ -145,6 +145,10 @@ export const routes: Routes = [
             {
                 path: 'living-meditations',
                 component: LivingMeditations,
+            },
+            {
+                path: 'living-massage',
+                component: Massages
             }
         ],
         data: { path: 'energy' }
