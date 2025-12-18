@@ -1,12 +1,13 @@
 import {Component, inject, OnDestroy} from '@angular/core';
 import {NavigationBar} from "../navigation-bar/navigation-bar";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-massages',
     imports: [
-        NavigationBar
+        NavigationBar,
+        RouterLink
     ],
   templateUrl: './massages.html',
   styleUrl: './massages.scss'
