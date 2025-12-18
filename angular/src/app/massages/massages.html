@@ -9,6 +9,8 @@
             <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/tantra-massage.png">
         } @else if (path === 'elements') {
             <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/shamanic-massage.png">
+        } @else if (path === 'energy') {
+            <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/living-massage.png">
         } @else {
             <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/massages.png">
     }
@@ -31,6 +33,11 @@
                 <h1>Šamanské masáže</h1>
                 <h3 style="margin-top:-7px; margin-bottom:20px">propojení s živly a uzemnění v tomto světě</h3>
             </div>
+        } @else if (path === 'energy') {
+            <div style="text-align:center">
+                <h1>Živé masáže</h1>
+                <h3 style="margin-top:-7px; margin-bottom:20px">individuální a živá péče jen o tebe</h3>
+            </div>
         } @else {
             <div style="text-align:center">
                 <h1>Masáže na Živé cestě</h1>
@@ -41,6 +48,27 @@
         <main class="cards-grid">
             <div class="container">
                 <div class="row g-3">
+                    @if (path === '' || path === 'energy') {
+                        <!-- Živá masáž -->
+                        <div class="col-12">
+                            <a href="/energy-path/living-massage" class="massage-card mc-energy" aria-label="Živá masáž">
+                                <div class="mc-inner">
+                                    <div class="mc-image" aria-hidden="true">
+                                        <img src="./assets/living-massage.png" alt="Ilustrace: živá masáž">
+                                    </div>
+                                    <div class="mc-content">
+                                        <h3 class="mc-title">Živá masáž</h3>
+                                        <p class="mc-desc">Individuální péče přizpůsobená na míru pro naplnění vašich neskrytějších potřeb</p>
+                                    </div>
+                                    <div class="mc-meta">
+                                        <div class="meta-line">Cena: <span class="meta-strong">2 500 Kč / hod</span></div>
+                                        <div class="meta-line">Provází: <span class="meta-strong">Hakima / Manu</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
                     @if (path === '' || path === 'tantra') {
 
                     <!-- Tantrická masáž pro muže -->
@@ -55,8 +83,8 @@
                                     <p class="mc-desc">Hluboce uvolňující, pečující a smyslná masáž, která skrze vědomý dotek vede do stavu, kdy tělo ožívá novou energií. Součástí je celotělová olejová masáž včetně masáže lingamu pro potěšení. </p>
                                 </div>
                                 <div class="mc-meta">
-                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
-                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 2h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 3 000 Kč</span></div>
                                     <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
                                 </div>
                             </div>
@@ -76,8 +104,8 @@
                                     <p class="mc-desc">Jemná, pečující a respektující smyslná masáž zaměřená na probuzení těla, vnímání energie a oživení vnitřní ženské vitality. Součástí je celotělová olejová masáž včetně potěšující masáže jóni.</p>
                                 </div>
                                 <div class="mc-meta">
-                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
-                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 2h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 3 000 Kč</span></div>
                                     <div class="meta-line">Provází: <span class="meta-strong">Manu / Hakima</span></div>
                                 </div>
                             </div>
@@ -100,8 +128,8 @@
                                     <p class="mc-desc">Masáž, která se odvažuje za běžné hranice a vede k transformujícímu prožitku blaženého odevzdání se. Vhodné pro tebe, kdo hledáš intenzitu a chtěl bys zažít vzrušující pocit ztráty kontroly.</p>
                                 </div>
                                 <div class="mc-meta">
-                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
-                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 900 Kč</span></div>
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 2h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 3 500 Kč</span></div>
                                     <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
                                 </div>
                             </div>
@@ -120,8 +148,8 @@
                                     <p class="mc-desc">Masáž, při které zkoumáš intenzitu prožívání a kdy se můžeš bezpečně vydat za hranice, kam se běžně neodvažuješ. Transformativní zážitek blaženého vzdání se kontroly a prohloubení vlastní síly</p>
                                 </div>
                                 <div class="mc-meta">
-                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
-                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 900 Kč</span></div>
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 2h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 3 500 Kč</span></div>
                                     <div class="meta-line">Provází: <span class="meta-strong">Manu / Hakima</span></div>
                                 </div>
                             </div>
@@ -142,8 +170,8 @@
                                     <p class="mc-desc">Holistická celotělová masáž vycházející z havajské chrámové masáže a inspirovaná Oshem. Svou jedinečnou dynamikou a hloubkou přináší stabilitu jádra, uzemění, radost a vnitřní mír.</p>
                                 </div>
                                 <div class="mc-meta">
-                                    <div class="meta-line">Délka: <span class="meta-strong">od 90 min</span></div>
-                                    <div class="meta-line">Cena: <span class="meta-strong">od 2 400 Kč</span></div>
+                                    <div class="meta-line">Délka: <span class="meta-strong">od 2h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">od 3 000 Kč</span></div>
                                     <div class="meta-line">Provází: <span class="meta-strong">Hakima</span></div>
                                 </div>
                             </div>
