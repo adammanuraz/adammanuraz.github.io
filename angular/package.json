@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:deploy": "ng build && cp dist/zivacesta/browser/index.html dist/zivacesta/browser/404.html && cp -R dist/zivacesta/browser/* ../",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
