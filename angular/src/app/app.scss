@@ -1,3 +1,4 @@
+@import '../variables';
 
 .ziva-footer {
   background-color: #EDE8E3; /* living path secondary */
@@ -5,17 +6,31 @@
   border-top: 1px solid rgba(0,0,0,0.08);
 }
 
+.container, .body-content {
+  max-width: $widescreen-max-width;
+
+  .header-picture-container {
+    max-width: $widescreen-max-width;
+
+    img {
+      max-width: $widescreen-max-width;
+    }
+  }
+}
+
 .footer-title {
   font-weight: 700;
   font-size: 1.05rem;
   margin-bottom: 0.75rem;
   letter-spacing: 0.5px;
+  text-align: end;
 }
 
 .footer-text {
   margin: 0;
   font-size: 0.95rem;
   color: #2E2E2E;
+  text-align: end;
 }
 
 .footer-link {

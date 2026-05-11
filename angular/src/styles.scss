@@ -251,6 +251,7 @@ img.personal-photo {
   margin-bottom: 5px;
   display: block;
   float:right;
+  width: 40%;
 }
 .center-cropped {
   background-position: center center;
@@ -338,7 +339,7 @@ body {
 .hero .lead {
   color: var(--subtext);
   max-width: 780px;
-  margin: 0 auto 1.25rem;
+  margin: 20px 0;
 }
 
 .grid {

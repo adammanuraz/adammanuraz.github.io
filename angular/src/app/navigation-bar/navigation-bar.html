@@ -5,7 +5,7 @@
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="navbar-brand" href="/"><img src="assets/favicon.ico" alt="logo živé cesty" style="width: 22px; vertical-align: text-top;">  Živá cesta</a>
+                <a class="navbar-brand" href="/"><img src="assets/logo.png" alt="logo živé cesty" style="width: 22px; vertical-align: text-top;">  Živá cesta</a>
                 @if (path === 'shadow') {
                     <a class="navbar-brand" style="font-family: cursive; font-size: 21px;" href="shadow-path">Cesta stínu</a>
                 } @else if (path === 'energy') {
@@ -33,11 +33,11 @@
 <!--                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/meditations':'meditations'}}">Meditace</a>-->
 <!--                    </li>-->
 <!--                }-->
-                @if (!path || path === 'energy') {
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/events':'events'}}">Kalendář akcí</a>
-                    </li>
-                }
+<!--                @if (!path || path === 'energy') {-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" aria-current="page" href="{{path ? path + '-path/events':'events'}}">Kalendář akcí</a>-->
+<!--                    </li>-->
+<!--                }-->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Průvodci
