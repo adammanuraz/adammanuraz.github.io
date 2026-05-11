@@ -1,4 +1,6 @@
 .idea/
+.pnpm-store/
 angular/node_modules
 angular/.angular
 angular/dist
+angular/assets
