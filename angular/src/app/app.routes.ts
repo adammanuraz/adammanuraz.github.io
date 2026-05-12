@@ -16,6 +16,7 @@ import {DominantMassageWoman} from "./massages/dominant-massage-woman/dominant-m
 import {TantraMassageMan} from "./massages/tantra-massage-man/tantra-massage-man";
 import {TantraMassageWoman} from "./massages/tantra-massage-woman/tantra-massage-woman";
 import {ShamanicMasssage} from "./massages/shamanic-masssage/shamanic-masssage";
+import {LivingMasssage} from "./massages/living-masssage/living-masssage";
 
 export const routes: Routes = [
     {
@@ -64,11 +65,11 @@ export const routes: Routes = [
             },
             {
                 path: 'dominant-massage-man',
-                component: Massages
+                component: DominantMassageMan
             },
             {
                 path: 'dominant-massage-woman',
-                component: Massages
+                component: DominantMassageWoman
             }
         ],
         data: { path: 'shadow' }
@@ -102,11 +103,11 @@ export const routes: Routes = [
             },
             {
                 path: 'tantra-massage-man',
-                component: Massages
+                component: TantraMassageMan
             },
             {
                 path: 'tantra-massage-woman',
-                component: Massages
+                component: TantraMassageWoman
             }
         ],
         data: { path: 'tantra' }
@@ -116,7 +117,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                component: Events,
+                component: Massages,
             },
             {
                 path: 'living-aum-meditation',
@@ -148,7 +149,7 @@ export const routes: Routes = [
             },
             {
                 path: 'living-massage',
-                component: Massages
+                component: LivingMasssage
             }
         ],
         data: { path: 'energy' }
@@ -182,7 +183,7 @@ export const routes: Routes = [
             },
             {
                 path: 'shamanic-massage',
-                component: Massages
+                component: ShamanicMasssage
             }
         ],
         data: { path: 'elements' }
