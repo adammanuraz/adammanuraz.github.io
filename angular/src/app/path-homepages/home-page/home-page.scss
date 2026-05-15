@@ -11,6 +11,16 @@
     }
   }
 }
+
+.home-hero {
+  padding-bottom: 0;
+  text-align: left;
+}
+
+.home-hero-photo {
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(46, 46, 46, 0.12);
+}
 //
 //:root{
 //  /* Cesta stínu */
@@ -175,4 +185,14 @@
 @media (max-width: 575.98px){
   .card-block { padding: 1.25rem; min-height: 200px; }
   .card-title { font-size: 1.35rem; }
+  .home-hero {
+    padding: 1.25rem 0 0;
+  }
+  .home-hero-photo {
+    width: 100%;
+    max-width: none;
+    height: min(68vh, 520px);
+    object-fit: cover;
+    object-position: center 24%;
+  }
 }

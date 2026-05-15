@@ -252,6 +252,20 @@ img.personal-photo {
   display: block;
   float:right;
   width: 40%;
+  max-width: 100%;
+  height: auto;
+}
+.header-picture-container {
+  width: 100%;
+  overflow: hidden;
+}
+.header-picture-container img {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: clamp(220px, 42vw, 420px);
+  object-fit: cover;
+  object-position: center;
 }
 .center-cropped {
   background-position: center center;
@@ -453,6 +467,15 @@ body {
 @media (max-width: 575.98px){
   .card-block { padding: 1.25rem; min-height: 200px; }
   .card-title { font-size: 1.35rem; }
+  .basic-text-padding { padding: 14px; }
+  img.personal-photo {
+    float: none;
+    width: min(100%, 420px);
+    margin: 0 auto 1.25rem;
+  }
+  .header-picture-container img {
+    height: 260px;
+  }
 }
 
 
