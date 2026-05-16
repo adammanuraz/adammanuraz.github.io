@@ -1,271 +1,63 @@
 <app-navigation-bar></app-navigation-bar>
 
-<div class="container body-content" style="padding:0; width:auto; margin:0 auto">
+<div class="container body-content events-page">
+    <div class="header-picture-container" style="width:100%; overflow:hidden">
+        <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/Hakima a Manu formal 2.jpg" alt="Hakima a Manu">
+    </div>
 
     <div class="basic-text-padding">
-        <div style="text-align:center">
-            <h1>Nejbližší akce</h1>
+        <div class="events-heading">
+            <h1>Akce</h1>
+            <h3>večery Živé cesty</h3>
         </div>
 
-        <div class="container body-content" style="padding:0; width:auto; margin:0">
+        <section class="event-products" aria-label="Typy akcí">
+            <a class="event-product event-product-tantra" routerLink="/events/tantricky-vecer-zive-cesty">
+                <span class="event-product-title">Večer Živé cesty tantry</span>
+                <span class="event-product-text">Jemný večer vědomého doteku, dechu a práce s životní energií v bezpečném a respektujícím prostoru.</span>
+            </a>
 
-            <div class="header-picture-container" style="width:100%; overflow:hidden">
-                <img style=" margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:20px; width: inherit;" src="./assets/meditationsMotive.png">
+            <a class="event-product event-product-dominant" routerLink="/events/dominantni-vecer-zive-cesty">
+                <span class="event-product-title">Večer Živé cesty stínu</span>
+                <span class="event-product-text">Prostor pro zkoumání hranic, odevzdání, důvěry a síly s jasnými dohodami a citlivým vedením.</span>
+            </a>
+
+            <a class="event-product event-product-meditation" routerLink="/events/meditacni-vecer-zive-cesty">
+                <span class="event-product-title">Večer Živé cesty energie</span>
+                <span class="event-product-text">Meditativní setkání pro zklidnění, uvolnění těla, hlubší kontakt se sebou a sdílenou přítomnost.</span>
+            </a>
+
+            <a class="event-product event-product-elements" routerLink="/events/vecer-zive-cesty-zivlu">
+                <span class="event-product-title">Večer Živé cesty živlů</span>
+                <span class="event-product-text">Setkání s kvalitou země, vody, ohně a vzduchu skrze tělo, pohyb a vnitřní ukotvení.</span>
+            </a>
+        </section>
+
+        <section class="events-schedule" aria-label="Plánované akce">
+            <h2>Plánované akce 2026</h2>
+
+            <div class="table-responsive">
+                <table class="table events-table">
+                    <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Čas</th>
+                        <th>Akce</th>
+                        <th>Cena</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @for (event of events; track event.date) {
+                        <tr>
+                            <td>{{ event.date }}</td>
+                            <td>18:30 - 22:00</td>
+                            <td><a [routerLink]="event.link">{{ event.name }}</a></td>
+                            <td>840 Kč / 1 440 Kč pár</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
             </div>
-        </div>
-        <!--        <h2><a href="../ziva-aum-meditace">Živá AUM meditace</a></h2>-->
-<!--        <h2 class="letter-colored"><a href="../energy-path/living-aum-meditation">Živá AUM meditace</a></h2>-->
-<!--        <p>-->
-<!--            <strong>Kdy:</strong><br />-->
-<!--            neděle 7.&nbsp;prosince&nbsp;2025, 13:00 - 17:00-->
-<!--        </p>-->
-
-<!--        <p>-->
-<!--            <strong>Kde:</strong><br>-->
-<!--            <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1-->
-<!--        </p>-->
-
-<!--        <p>-->
-<!--            <strong>Kdo:</strong><br>-->
-<!--            Akcí provází <a target="_blank" href="../manu">Manu</a>-->
-<!--        </p>-->
-
-<!--        <p><strong>Plná cena (na místě v hotovosti):</strong> 1 200 Kč</p>-->
-<!--        <p><strong>Zvýhodněná cena:</strong> 900 Kč</p>-->
-
-<!--        <p>-->
-<!--            Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/orq8SWAdDYLiojvTA">přihlásit</a> a potvrdit svou účast do středy 3. prosince.-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            <strong>Akce 1+1:</strong><br>-->
-<!--            Pokud přivedete na meditaci někoho dalšího, tj. <a target="_blank" href="https://forms.gle/orq8SWAdDYLiojvTA">přihlásíte se</a> a do přihlášky napíšete 1+1 a jméno, s kým se hlásíte, máte každý z vás slevu <strong>200 Kč</strong>!<br>-->
-<!--            Slevy lze kombinovat, takže přihlášením se do 3. prosince můžete mít AUM meditaci každý jen za&nbsp;700&nbsp;kč!-->
-<!--        </p>-->
-<!--        <button type="button" onclick="location.href = 'https://forms.gle/orq8SWAdDYLiojvTA';" class="btn btn-warning mybtn">-->
-<!--            <span style="padding:1px;">přihlásit se</span>-->
-<!--        </button>-->
-
-        <!--        <h2><a href="../ziva-aum-meditace">Živá AUM meditace</a></h2>-->
-        <!--        <p>-->
-        <!--            Živá AUM meditace je dynamická a transformační cesta skrze emoce, pohyb a autentické sdílení. Během dvou a půl hodinového procesu účastníci procházejí 14 fázemi, ve kterých mohou bezpečně prozkoumat a vyjádřit své pocity – od hněvu po lásku, od smutku po radost. Tato unikátní společenská meditace, vytvořená Veereshem z Humaniversity, umožňuje uvolnit stres, získat hlubší porozumění sobě samým a prožít pocit propojení s ostatními.-->
-        <!--        </p>-->
-        <!--        <p>-->
-        <!--            <strong>Kdy:</strong><br />-->
-        <!--            pátek 31.&nbsp;ledna&nbsp;2025, 17:00 - 21:00-->
-        <!--        </p>-->
-
-        <!--        <p>-->
-        <!--            <strong>Kde:</strong><br>-->
-        <!--            <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (velký sál): Týnská ulička 6, Praha 1-->
-        <!--        </p>-->
-
-        <!--        <p><strong>Plná cena (na místě v hotovosti):</strong> 1 200 Kč</p>-->
-        <!--         <p><strong>Zvýhodněná cena:</strong> 900 Kč</p>-->
-
-        <!--        <p>-->
-        <!--             Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/GaxCY8Sc8ooXb9Sa9">přihlásit</a> do 24. ledna a zaplatit 900 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.-->
-        <!--        </p>-->
-        <!--        <p>-->
-        <!--        <strong>Akce 1+1:</strong><br>-->
-        <!--        Pokud přivedete na meditaci někoho dalšího, tj. <a target="_blank" href="https://forms.gle/GaxCY8Sc8ooXb9Sa9">přihlásíte se</a> a do přihlášky napíšete 1+1 a jméno, s kým se hlásíte, máte každý z vás slevu <strong>200 Kč</strong>!<br>-->
-        <!--            Slevy lze kombinovat, takže zaplacením předem na účet do 24. ledna stačí za oba zaplatit celkem 1&nbsp;400&nbsp;kč.-->
-        <!--    </p>-->
-        <!--        <button type="button" onclick="location.href = 'https://forms.gle/GaxCY8Sc8ooXb9Sa9';" class="btn btn-warning mybtn">-->
-        <!--            <span style="padding:1px;">přihlásit se</span>-->
-        <!--        </button>-->
-
-
-
-        <!--        <h2 class="letter-colored"><a href="../zive-meditace">Živé meditace</a></h2>-->
-        <!--        <p>-->
-        <!--            Živé meditace ti nabídnou jedinečný prostor, kde můžeš bezpečně prozkoumat své emoce, uvolnit napětí skrze pohyb a dech a zažít léčivou sílu autentického sdílení. Naše setkání kombinují dynamické techniky, aktivní meditace (např. Osho či z Humaniversity) a hlubokou práci s emocemi, které ti pomohou osvobodit se od vnitřních bloků, posílit svou vitalitu a nalézt v sobě radost a klid.-->
-        <!--        </p>-->
-        <!--        <p>-->
-        <!--            <strong>Kdy:</strong><br />-->
-        <!--            pondělí 10.&nbsp;února&nbsp;2025, 18:00 - 21:00-->
-        <!--        </p>-->
-
-        <!--        <p>-->
-        <!--            <strong>Kde:</strong><br>-->
-        <!--            <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1-->
-        <!--        </p>-->
-
-
-        <!--        <p><strong>Plná cena (na místě v hotovosti):</strong> 600 Kč</p>-->
-        <!--        <p><strong>Zvýhodněná cena:</strong> 450 Kč</p>-->
-
-        <!--        <p>-->
-        <!--            Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/KEBNX8CLJ5bCENsg7">přihlásit</a> do 3. února a zaplatit 450 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.-->
-        <!--        </p>-->
-        <!--        <button type="button" onclick="location.href = 'https://forms.gle/KEBNX8CLJ5bCENsg7';" class="btn btn-warning mybtn">-->
-        <!--            <span style="padding:1px;">přihlásit se</span>-->
-        <!--        </button>-->
-
-
-
-
-<!--                <h2 class="letter-colored">Živé meditace a <a href="../energy-path/living-aum-meditation">AUM</a></h2>-->
-<!--                <p>-->
-<!--                    Živé meditace a AUM je celodenní ponoření do světa setkávání, emocí, pohybu a vědomého prožívání. Tento jedinečný den ti nabídne prostor, kde můžeš skrze Živé meditace a <a href="../energy-path/living-aum-meditation">Živou AUM meditaci</a> prozkoumat hloubky svého nitra, uvolnit stres a nalézt novou energii. Čekají tě dynamické techniky, aktivní meditace a autentické sdílení v bezpečném a podporujícím prostředí. Přijď si zažít den plný sebeobjevování, propojení s ostatními a radosti z pohybu, kde se můžeš naplno otevřít životu a jeho nekonečným možnostem.-->
-<!--                </p>-->
-<!--                <p>-->
-<!--                    <strong>Kdy:</strong><br />-->
-<!--                    sobota 21.&nbsp;února&nbsp;2026, 9:00 - 18:00-->
-<!--                </p>-->
-
-<!--                <p>-->
-<!--                    <strong>Kde:</strong><br>-->
-<!--                    <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1-->
-<!--                </p>-->
-
-<!--                <p>-->
-<!--                    <strong>Provází:</strong><br>-->
-<!--                    <a href="../manu">Manu</a> a <a href="../hakima">Hakima</a>-->
-<!--                </p>-->
-
-<!--                <p><strong>Plná cena (na místě v hotovosti):</strong> 2 200 Kč</p>-->
-<!--                <p><strong>Zvýhodněná cena:</strong> 1 850 Kč</p>-->
-
-<!--                <p>-->
-<!--                    Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/TWtRZKM9KSH9y65T7">přihlásit</a> do 11. února a zaplatit 1 850 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.-->
-<!--                </p>-->
-<!--                <button type="button" onclick="location.href = 'https://forms.gle/TWtRZKM9KSH9y65T7';" class="btn btn-warning mybtn">-->
-<!--                    <span style="padding:1px;">přihlásit se</span>-->
-<!--                </button>-->
-
-
-<!--        <hr>-->
-<!--        <h2 class="letter-colored">Živé meditace a AUM</h2>-->
-<!--        <p>-->
-<!--            Den s Živými meditacemi a AUM meditací je celodenní ponoření do světa emocí, pohybu a vědomého prožívání. Tento jedinečný den ti nabídne prostor, kde můžeš skrze Živé meditace a <a href="../energy-path/living-aum-meditation">Živou AUM meditaci</a> prozkoumat hloubky svého nitra, uvolnit stres a nalézt novou energii. Čekají tě dynamické techniky, aktivní meditace a autentické sdílení v bezpečném a podporujícím prostředí. Přijď si zažít den plný sebeobjevování, propojení s ostatními a radosti z pohybu, kde se můžeš naplno otevřít životu a jeho nekonečným možnostem.-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            <strong>Kdy:</strong><br />-->
-<!--            neděle 17.&nbsp;května&nbsp;2026, 9:00 - 18:00-->
-<!--        </p>-->
-
-<!--        <p>-->
-<!--            <strong>Kde:</strong><br>-->
-<!--            <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1-->
-<!--        </p>-->
-
-<!--        <p><strong>Plná cena (na místě v hotovosti):</strong> 2 200 Kč</p>-->
-<!--        <p><strong>Zvýhodněná cena:</strong> 1 850 Kč</p>-->
-
-<!--        <p>-->
-<!--            Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/kayYgm1XLJ9Q6BfC8">přihlásit</a> do 7. května a zaplatit 1 850 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.-->
-<!--        </p>-->
-<!--        <button type="button" onclick="location.href = 'https://forms.gle/kayYgm1XLJ9Q6BfC8';" class="btn btn-warning mybtn">-->
-<!--            <span style="padding:1px;">přihlásit se</span>-->
-<!--        </button>-->
-
-
-
-<!--        <hr>-->
-<!--        <h2 class="letter-colored">Živé meditace a AUM</h2>-->
-<!--        <p>-->
-<!--            Den s Živými meditacemi a AUM meditací je celodenní ponoření do světa emocí, pohybu a vědomého prožívání. Tento jedinečný den ti nabídne prostor, kde můžeš skrze Živé meditace a <a href="../energy-path/living-aum-meditation">Živou AUM meditaci</a> prozkoumat hloubky svého nitra, uvolnit stres a nalézt novou energii. Čekají tě dynamické techniky, aktivní meditace a autentické sdílení v bezpečném a podporujícím prostředí. Přijď si zažít den plný sebeobjevování, propojení s ostatními a radosti z pohybu, kde se můžeš naplno otevřít životu a jeho nekonečným možnostem.-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            <strong>Kdy:</strong><br />-->
-<!--            neděle 20.&nbsp;září&nbsp;2026, 9:00 - 18:00-->
-<!--        </p>-->
-
-<!--        <p>-->
-<!--            <strong>Kde:</strong><br>-->
-<!--            <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1-->
-<!--        </p>-->
-
-<!--        <p><strong>Plná cena (na místě v hotovosti):</strong> 2 200 Kč</p>-->
-<!--        <p><strong>Zvýhodněná cena:</strong> 1 850 Kč</p>-->
-
-<!--        <p>-->
-<!--            Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/wUAzypt5ijCiaTNr5">přihlásit</a> do 10. září a zaplatit 1 850 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.-->
-<!--        </p>-->
-<!--        <button type="button" onclick="location.href = 'https://forms.gle/wUAzypt5ijCiaTNr5';" class="btn btn-warning mybtn">-->
-<!--            <span style="padding:1px;">přihlásit se</span>-->
-<!--        </button>-->
-
-    <!--
-                <hr>
-
-                <h2 class="letter-colored"><a href="../zive-meditace">Živé meditace</a></h2>
-                <p>
-                    Živé meditace ti nabídnou jedinečný prostor, kde můžeš bezpečně prozkoumat své emoce, uvolnit napětí skrze pohyb a dech a zažít léčivou sílu autentického sdílení. Naše setkání kombinují dynamické techniky, aktivní meditace (např. Osho či z Humaniversity) a hlubokou práci s emocemi, které ti pomohou osvobodit se od vnitřních bloků, posílit svou vitalitu a nalézt v sobě radost a klid.
-                </p>
-                <p>
-                    <strong>Kdy:</strong><br />
-                    úterý 8.&nbsp;dubna&nbsp;2025, 18:00 - 21:00
-                </p>
-
-                <p>
-                    <strong>Kde:</strong><br>
-                    <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1
-                </p>
-
-                <p><strong>Plná cena (na místě v hotovosti):</strong> 600 Kč</p>
-                <p><strong>Zvýhodněná cena:</strong> 450 Kč</p>
-
-                <p>
-                    Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/xeviRvNbLHmSubgQ7">přihlásit</a> do 31. března a zaplatit 450 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.
-                </p>
-                <button type="button" onclick="location.href = 'https://forms.gle/xeviRvNbLHmSubgQ7';" class="btn btn-warning mybtn">
-                    <span style="padding:1px;">přihlásit se</span>
-                </button>
-
-
-                <hr>
-                <h2><a href="../ziva-aum-meditace">Živá AUM meditace</a></h2>
-                <p>
-                    Živá AUM meditace je dynamická a transformační cesta skrze emoce, pohyb a autentické sdílení. Během dvou a půl hodinového procesu účastníci procházejí 14 fázemi, ve kterých mohou bezpečně prozkoumat a vyjádřit své pocity – od hněvu po lásku, od smutku po radost. Tato unikátní společenská meditace, vytvořená Veereshem z Humaniversity, umožňuje uvolnit stres, získat hlubší porozumění sobě samým a prožít pocit propojení s ostatními.
-                </p>
-                <p>
-                    <strong>Kdy:</strong><br />
-                    čtvrtek 22.&nbsp;května&nbsp;2025, 17:00 - 21:00
-                </p>
-
-                <p>
-                    <strong>Kde:</strong><br>
-                    <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (velký sál): Týnská ulička 6, Praha 1
-                </p>
-
-                <p><strong>Cena:</strong> dobrovolná (doporučená 1 200 Kč)</p>
-
-                <button type="button" onclick="location.href = 'https://forms.gle/1eYQTwsZJBHeJZd8A';" class="btn btn-warning mybtn">
-                    <span style="padding:1px;">přihlásit se</span>
-                </button>
-
-
-
-
-                <hr>
-
-                <h2 class="letter-colored"><a href="../zive-meditace">Živé meditace</a></h2>
-                <p>
-                    Živé meditace ti nabídnou jedinečný prostor, kde můžeš bezpečně prozkoumat své emoce, uvolnit napětí skrze pohyb a dech a zažít léčivou sílu autentického sdílení. Naše setkání kombinují dynamické techniky, aktivní meditace (např. Osho či z Humaniversity) a hlubokou práci s emocemi, které ti pomohou osvobodit se od vnitřních bloků, posílit svou vitalitu a nalézt v sobě radost a klid.
-                </p>
-                <p>
-                    <strong>Kdy:</strong><br />
-                    úterý 24.&nbsp;června&nbsp;2025, 18:00 - 21:00
-                </p>
-
-                <p>
-                    <strong>Kde:</strong><br>
-                    <a target="_blank" href="https://www.maitrea.cz/kontakty">Maitrea</a> (malý sál): Týnská ulička 6, Praha 1
-                </p>
-
-                <p><strong>Plná cena (na místě v hotovosti):</strong> 600 Kč</p>
-                <p><strong>Zvýhodněná cena:</strong> 450 Kč</p>
-
-                <p>
-                    Pro zvýhodněnou cenu se stačí <a target="_blank" href="https://forms.gle/MbrZbfYD8bEQuQMx7">přihlásit</a> do 16. června a zaplatit 450 Kč předem na účet 1669537015/3030. Do poznámky napište, za koho platíte.
-                </p>
-                <button type="button" onclick="location.href = 'https://forms.gle/MbrZbfYD8bEQuQMx7';" class="btn btn-warning mybtn">
-                    <span style="padding:1px;">přihlásit se</span>
-                </button>
-
-            -->
-
-
+        </section>
     </div>
 </div>

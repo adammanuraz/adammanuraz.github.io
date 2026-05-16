@@ -1,13 +1,130 @@
 @import '../../variables';
 
-.container, .body-content {
+.container,
+.body-content {
+  max-width: $widescreen-max-width;
+}
+
+.events-page {
+  padding: 0;
+  width: auto;
+  margin: 0 auto;
+}
+
+.header-picture-container {
+  width: 100%;
+  overflow: hidden;
   max-width: $widescreen-max-width;
 
-  .header-picture-container {
+  img {
+    display: block;
+    width: 100%;
     max-width: $widescreen-max-width;
+    margin: 0;
+    padding: 0 0 20px;
+  }
+}
 
-    img {
-      max-width: $widescreen-max-width;
-    }
+.events-heading {
+  text-align: center;
+
+  h3 {
+    margin-top: -7px;
+    margin-bottom: 20px;
+  }
+}
+
+.event-products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 26px 0 34px;
+}
+
+.event-product {
+  display: flex;
+  flex-direction: column;
+  min-height: 172px;
+  padding: 20px;
+  border-radius: 8px;
+  color: #2d241d;
+  text-decoration: none;
+  border: 1px solid rgba(45, 36, 29, 0.15);
+  box-shadow: 0 10px 26px rgba(45, 36, 29, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+
+  &:hover,
+  &:focus {
+    color: #2d241d;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(45, 36, 29, 0.13);
+  }
+}
+
+.event-product-tantra {
+  background: #fff3ee;
+}
+
+.event-product-dominant {
+  background: #f1eef4;
+}
+
+.event-product-meditation {
+  background: #eef7f2;
+}
+
+.event-product-elements {
+  background: #f7f1e8;
+}
+
+.event-product-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.event-product-text {
+  line-height: 1.45;
+}
+
+.events-schedule {
+  h2 {
+    margin-bottom: 16px;
+  }
+}
+
+.events-table {
+  border: 1px solid rgba(45, 36, 29, 0.14);
+
+  th {
+    background: #4b3d33;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  a {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 980px) {
+  .event-products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .event-products {
+    grid-template-columns: 1fr;
+  }
+
+  .event-product {
+    min-height: auto;
   }
 }

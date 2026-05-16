@@ -1,0 +1,50 @@
+<app-navigation-bar></app-navigation-bar>
+
+<div class="container body-content event-detail-page">
+    <div class="basic-text-padding">
+        <div class="event-detail-heading">
+            <h1>Večer Živé cesty tantry</h1>
+            <h3>Vědomý dotek, dech a živá přítomnost</h3>
+        </div>
+
+        <p>
+            Večer Živé cesty tantry je jemně vedené setkání pro prohloubení kontaktu s tělem, dechem a životní energií. V bezpečném prostředí se budeme věnovat vnímání hranic, důvěře, přítomnému doteku a citlivému propojení se sebou i druhými.
+        </p>
+
+        <p>
+            Večer je vhodný pro jednotlivce i páry. Není potřeba žádná předchozí zkušenost, důležitá je otevřenost, respekt a ochota naslouchat svému tělu.
+        </p>
+
+        <div class="event-detail-info">
+            <p><strong>Cena pro jednotlivce:</strong> 840 Kč</p>
+            <p><strong>Cena pro pár:</strong> 1 440 Kč</p>
+        </div>
+
+        <h4 class="event-dates-title">Termíny</h4>
+        <div class="table-responsive">
+            <table class="table event-detail-table">
+                <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Čas</th>
+                </tr>
+                </thead>
+                <tbody>
+                @for (event of events; track event.date) {
+                    <tr>
+                        <td>{{ event.date }}</td>
+                        <td>18:30 - 22:00</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+
+        <section class="event-signup">
+            <h4>Chci se přihlásit</h4>
+            <p>
+                Pro přihlášení na vybraný termín nám napiš přímo přes whatsapp: <a routerLink="/hakima">Hakima</a> 773 916 090 nebo <a routerLink="/manu">Manu</a> 774 672 131.
+            </p>
+        </section>
+    </div>
+</div>

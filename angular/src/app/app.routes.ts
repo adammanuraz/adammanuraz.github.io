@@ -21,6 +21,10 @@ import {AboutLivingPath} from "./about-living-path/about-living-path";
 import {Learning} from "./learning/learning";
 import {TantricMassageTraining} from "./learning/tantric-massage-training/tantric-massage-training";
 import {DominantMassageTraining} from "./learning/dominant-massage-training/dominant-massage-training";
+import {TantricEvening} from "./events/tantric-evening/tantric-evening";
+import {DominantEvening} from "./events/dominant-evening/dominant-evening";
+import {MeditationEvening} from "./events/meditation-evening/meditation-evening";
+import {ElementsEvening} from "./events/elements-evening/elements-evening";
 
 export const routes: Routes = [
     {
@@ -31,6 +35,26 @@ export const routes: Routes = [
     {
         path: 'events',
         component: Events,
+    },
+    {
+        path: 'events/tantricky-vecer-zive-cesty',
+        component: TantricEvening,
+        title: 'Večer Živé cesty tantry'
+    },
+    {
+        path: 'events/dominantni-vecer-zive-cesty',
+        component: DominantEvening,
+        title: 'Večer Živé cesty stínu'
+    },
+    {
+        path: 'events/meditacni-vecer-zive-cesty',
+        component: MeditationEvening,
+        title: 'Večer Živé cesty energie'
+    },
+    {
+        path: 'events/vecer-zive-cesty-zivlu',
+        component: ElementsEvening,
+        title: 'Večer Živé cesty živlů'
     },
     {
         path: 'massages',
