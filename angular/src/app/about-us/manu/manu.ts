@@ -1,13 +1,14 @@
 import {Component, inject, OnDestroy} from '@angular/core';
 import {NavigationBar} from "../../navigation-bar/navigation-bar";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-manu',
-  imports: [
-    NavigationBar
-  ],
+    imports: [
+        NavigationBar,
+        RouterLink
+    ],
   templateUrl: './manu.html',
   styleUrl: './manu.scss'
 })
