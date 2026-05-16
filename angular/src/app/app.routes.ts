@@ -25,6 +25,12 @@ import {TantricEvening} from "./events/tantric-evening/tantric-evening";
 import {DominantEvening} from "./events/dominant-evening/dominant-evening";
 import {MeditationEvening} from "./events/meditation-evening/meditation-evening";
 import {ElementsEvening} from "./events/elements-evening/elements-evening";
+import {CoupleTantraMassage} from "./massages/couple-tantra-massage/couple-tantra-massage";
+import {CoupleDominantMassage} from "./massages/couple-dominant-massage/couple-dominant-massage";
+import {FourHandTantraMassage} from "./massages/four-hand-tantra-massage/four-hand-tantra-massage";
+import {FourHandDominantMassage} from "./massages/four-hand-dominant-massage/four-hand-dominant-massage";
+import {DeArmouringMassage} from "./massages/de-armouring-massage/de-armouring-massage";
+import {ShibariSession} from "./massages/shibari-session/shibari-session";
 
 export const routes: Routes = [
     {
@@ -118,6 +124,18 @@ export const routes: Routes = [
             {
                 path: 'dominant-massage-woman',
                 component: DominantMassageWoman
+            },
+            {
+                path: 'couple-dominant-massage',
+                component: CoupleDominantMassage
+            },
+            {
+                path: 'four-hand-dominant-massage',
+                component: FourHandDominantMassage
+            },
+            {
+                path: 'shibari-session',
+                component: ShibariSession
             }
         ],
         data: { path: 'shadow' }
@@ -156,6 +174,14 @@ export const routes: Routes = [
             {
                 path: 'tantra-massage-woman',
                 component: TantraMassageWoman
+            },
+            {
+                path: 'couple-tantra-massage',
+                component: CoupleTantraMassage
+            },
+            {
+                path: 'four-hand-tantra-massage',
+                component: FourHandTantraMassage
             }
         ],
         data: { path: 'tantra' }
@@ -198,6 +224,10 @@ export const routes: Routes = [
             {
                 path: 'living-massage',
                 component: LivingMasssage
+            },
+            {
+                path: 'de-armouring-massage',
+                component: DeArmouringMassage
             }
         ],
         data: { path: 'energy' }
