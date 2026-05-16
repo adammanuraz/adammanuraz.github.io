@@ -18,6 +18,9 @@ import {TantraMassageWoman} from "./massages/tantra-massage-woman/tantra-massage
 import {ShamanicMasssage} from "./massages/shamanic-masssage/shamanic-masssage";
 import {LivingMasssage} from "./massages/living-masssage/living-masssage";
 import {AboutLivingPath} from "./about-living-path/about-living-path";
+import {Learning} from "./learning/learning";
+import {TantricMassageTraining} from "./learning/tantric-massage-training/tantric-massage-training";
+import {DominantMassageTraining} from "./learning/dominant-massage-training/dominant-massage-training";
 
 export const routes: Routes = [
     {
@@ -32,6 +35,21 @@ export const routes: Routes = [
     {
         path: 'massages',
         component: Massages
+    },
+    {
+        path: 'vyuka',
+        component: Learning,
+        title: 'Výuka'
+    },
+    {
+        path: 'vyuka/certifikovany-vycvik-tantricke-masaze',
+        component: TantricMassageTraining,
+        title: 'Certifikovaný výcvik tantrické masáže Živé cesty'
+    },
+    {
+        path: 'vyuka/certifikovany-vycvik-dominantni-masaze',
+        component: DominantMassageTraining,
+        title: 'Certifikovaný výcvik dominantní masáže Živé cesty'
     },
     {
         path: 'o-zive-ceste',
