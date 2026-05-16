@@ -245,6 +245,9 @@ p.citation {
 .nav .nav-divider {
   background-color: #464646
 }
+img {
+  border-radius: 8px;
+}
 img.personal-photo {
   padding: 0px;
   margin-left: 5px;
@@ -263,7 +266,7 @@ img.personal-photo {
   display: block;
   width: 100% !important;
   max-width: 100%;
-  height: clamp(220px, 42vw, 420px);
+  height: clamp(220px, 42vw, 450px);
   object-fit: cover;
   object-position: center;
 }
@@ -271,9 +274,6 @@ img.personal-photo {
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
-}
-.basic-text-padding {
-  padding: 7px;
 }
 
 .flex-footer-container {
@@ -478,6 +478,9 @@ body {
   }
 }
 
+.basic-text-padding {
+  padding: 24px 0 0 0;
+}
 
 
 :root{

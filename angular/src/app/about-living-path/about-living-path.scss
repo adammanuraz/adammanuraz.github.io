@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.container,
+.body-content {
+  max-width: $widescreen-max-width;
+}
+
+.header-picture-container {
+  width: 100%;
+  max-width: $widescreen-max-width;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: $widescreen-max-width;
+    height: auto;
+  }
+}
+
+.about-living-path {
+  h1 {
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}

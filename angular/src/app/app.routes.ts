@@ -17,6 +17,7 @@ import {TantraMassageMan} from "./massages/tantra-massage-man/tantra-massage-man
 import {TantraMassageWoman} from "./massages/tantra-massage-woman/tantra-massage-woman";
 import {ShamanicMasssage} from "./massages/shamanic-masssage/shamanic-masssage";
 import {LivingMasssage} from "./massages/living-masssage/living-masssage";
+import {AboutLivingPath} from "./about-living-path/about-living-path";
 
 export const routes: Routes = [
     {
@@ -31,6 +32,11 @@ export const routes: Routes = [
     {
         path: 'massages',
         component: Massages
+    },
+    {
+        path: 'o-zive-ceste',
+        component: AboutLivingPath,
+        title: 'O Živé cestě'
     },
     {
         path: 'meditations',
