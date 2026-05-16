@@ -12,12 +12,13 @@
   }
 }
 
-:root{
+:host{
   --tantra-primary: #B23A48;
   --tantra-accent: #E85A4F;
   --shadow-primary: #585858;
   --element-primary: #4E8C5A;
   --energy-primary: #E8A43D;
+  --tantra-path-primary: #7C4A0B;
 
   --card-radius: 12px;
   --muted: #6b6b6b;
@@ -100,6 +101,10 @@ body {
 .mc-tantra-soft { border-left: 6px solid var(--tantra-accent); }
 .mc-tantra-soft .mc-image { background: linear-gradient(135deg, rgba(232,90,79,0.12), rgba(178,58,72,0.06)); }
 .mc-tantra-soft .icon { color: var(--tantra-accent); }
+
+.mc-tantra-path { border-left: 6px solid var(--tantra-path-primary); }
+.mc-tantra-path .mc-image { background: linear-gradient(135deg, rgba(124,74,11,0.12), rgba(232,164,61,0.06)); }
+.mc-tantra-path .icon { color: var(--tantra-path-primary); }
 
 .mc-dominant { border-left: 6px solid var(--shadow-primary); }
 .mc-dominant .mc-image { background: linear-gradient(135deg, rgba(88,88,88,0.08), rgba(0,0,0,0.02)); }

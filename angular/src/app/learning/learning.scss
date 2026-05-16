@@ -15,6 +15,8 @@
 :host{
   --tantra-primary: #B23A48;
   --shadow-primary: #585858;
+  --individual-primary: #4F7F67;
+  --tantric-path-primary: #7C4A0B;
   --card-radius: 12px;
   --muted: #6b6b6b;
 }
@@ -117,6 +119,22 @@
 
 .mc-dominant .mc-image {
   background: linear-gradient(135deg, rgba(88,88,88,0.08), rgba(0,0,0,0.02));
+}
+
+.mc-individual {
+  border-left: 6px solid var(--individual-primary);
+}
+
+.mc-individual .mc-image {
+  background: linear-gradient(135deg, rgba(79,127,103,0.12), rgba(125,184,146,0.06));
+}
+
+.mc-tantric-path {
+  border-left: 6px solid var(--tantric-path-primary);
+}
+
+.mc-tantric-path .mc-image {
+  background: linear-gradient(135deg, rgba(124,74,11,0.12), rgba(232,164,61,0.06));
 }
 
 @media (max-width: 767.98px){

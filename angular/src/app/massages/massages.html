@@ -191,7 +191,31 @@
                             </div>
                         </a>
                     </div>
+                    }
 
+                    @if (path === '' || path === 'tantra') {
+                    <!-- Tantrická cesta -->
+                    <div class="col-12">
+                        <a href="/vyuka/tantricka-cesta" class="massage-card mc-tantra-path" aria-label="Tantrická cesta — detail">
+                            <div class="mc-inner">
+                                <div class="mc-image" aria-hidden="true">
+                                    <img src="./assets/shamanic-massage.png" alt="Ilustrace: tantrická cesta">
+                                </div>
+                                <div class="mc-content">
+                                    <h3 class="mc-title">Tantrická cesta</h3>
+                                    <p class="mc-desc">Série 5 navazujících masážních a výukových setkání, která propojuje tantrickou, masážní a šamanskou praxi pro hlubší individuální péči.</p>
+                                </div>
+                                <div class="mc-meta">
+                                    <div class="meta-line">Délka: <span class="meta-strong">5 x 3h</span></div>
+                                    <div class="meta-line">Cena: <span class="meta-strong">27 400 Kč</span></div>
+                                    <div class="meta-line">Provází: <span class="meta-strong">Manu / Hakima</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    }
+
+                    @if (path === '' || path === 'shadow') {
                     <!-- Shibari session -->
                     <div class="col-12">
                         <a href="/shadow-path/shibari-session" class="massage-card mc-dominant" aria-label="Shibari session — detail">
