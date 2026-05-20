@@ -5,59 +5,59 @@
         <img style="align-self:center; margin:0px; float:none; padding:0px; padding-top:0px; padding-bottom:0px; width: inherit;" src="./assets/Ziva cesta.jpg" alt="Hakima a Manu">
     </div>
 
-    <div class="basic-text-padding">
-        <div class="events-heading">
-            <h1>Akce</h1>
-            <h3>večery Živé cesty</h3>
-        </div>
+<!--    <div class="basic-text-padding">-->
+<!--        <div class="events-heading">-->
+<!--            <h1>Akce</h1>-->
+<!--            <h3>večery Živé cesty</h3>-->
+<!--        </div>-->
 
-        <section class="event-products" aria-label="Typy akcí">
-            <a class="event-product event-product-tantra" routerLink="/events/tantricky-vecer-zive-cesty">
-                <span class="event-product-title">Večer Živé cesty tantry</span>
-                <span class="event-product-text">Jemný večer vědomého doteku, dechu a práce s životní energií v bezpečném a respektujícím prostoru.</span>
-            </a>
+<!--        <section class="event-products" aria-label="Typy akcí">-->
+<!--            <a class="event-product event-product-tantra" routerLink="/events/tantricky-vecer-zive-cesty">-->
+<!--                <span class="event-product-title">Večer Živé cesty tantry</span>-->
+<!--                <span class="event-product-text">Jemný večer vědomého doteku, dechu a práce s životní energií v bezpečném a respektujícím prostoru.</span>-->
+<!--            </a>-->
 
-            <a class="event-product event-product-dominant" routerLink="/events/dominantni-vecer-zive-cesty">
-                <span class="event-product-title">Večer Živé cesty stínu</span>
-                <span class="event-product-text">Prostor pro zkoumání hranic, odevzdání, důvěry a síly s jasnými dohodami a citlivým vedením.</span>
-            </a>
+<!--            <a class="event-product event-product-dominant" routerLink="/events/dominantni-vecer-zive-cesty">-->
+<!--                <span class="event-product-title">Večer Živé cesty stínu</span>-->
+<!--                <span class="event-product-text">Prostor pro zkoumání hranic, odevzdání, důvěry a síly s jasnými dohodami a citlivým vedením.</span>-->
+<!--            </a>-->
 
-            <a class="event-product event-product-meditation" routerLink="/events/meditacni-vecer-zive-cesty">
-                <span class="event-product-title">Večer Živé cesty energie</span>
-                <span class="event-product-text">Meditativní setkání pro zklidnění, uvolnění těla, hlubší kontakt se sebou a sdílenou přítomnost.</span>
-            </a>
+<!--            <a class="event-product event-product-meditation" routerLink="/events/meditacni-vecer-zive-cesty">-->
+<!--                <span class="event-product-title">Večer Živé cesty energie</span>-->
+<!--                <span class="event-product-text">Meditativní setkání pro zklidnění, uvolnění těla, hlubší kontakt se sebou a sdílenou přítomnost.</span>-->
+<!--            </a>-->
 
-            <a class="event-product event-product-elements" routerLink="/events/vecer-zive-cesty-zivlu">
-                <span class="event-product-title">Večer Živé cesty živlů</span>
-                <span class="event-product-text">Setkání s kvalitou země, vody, ohně a vzduchu skrze tělo, pohyb a vnitřní ukotvení.</span>
-            </a>
-        </section>
+<!--            <a class="event-product event-product-elements" routerLink="/events/vecer-zive-cesty-zivlu">-->
+<!--                <span class="event-product-title">Večer Živé cesty živlů</span>-->
+<!--                <span class="event-product-text">Setkání s kvalitou země, vody, ohně a vzduchu skrze tělo, pohyb a vnitřní ukotvení.</span>-->
+<!--            </a>-->
+<!--        </section>-->
 
-        <section class="events-schedule" aria-label="Plánované akce">
-            <h2>Plánované akce 2026</h2>
+<!--        <section class="events-schedule" aria-label="Plánované akce">-->
+<!--            <h2>Plánované akce 2026</h2>-->
 
-            <div class="table-responsive">
-                <table class="table events-table">
-                    <thead>
-                    <tr>
-                        <th>Datum</th>
-                        <th>Čas</th>
-                        <th>Akce</th>
-                        <th>Cena</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @for (event of events; track event.date) {
-                        <tr>
-                            <td>{{ event.date }}</td>
-                            <td>18:30 - 22:00</td>
-                            <td><a [routerLink]="event.link">{{ event.name }}</a></td>
-                            <td>840 Kč / 1 440 Kč pár</td>
-                        </tr>
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </div>
+<!--            <div class="table-responsive">-->
+<!--                <table class="table events-table">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Datum</th>-->
+<!--                        <th>Čas</th>-->
+<!--                        <th>Akce</th>-->
+<!--                        <th>Cena</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    @for (event of events; track event.date) {-->
+<!--                        <tr>-->
+<!--                            <td>{{ event.date }}</td>-->
+<!--                            <td>18:30 - 22:00</td>-->
+<!--                            <td><a [routerLink]="event.link">{{ event.name }}</a></td>-->
+<!--                            <td>840 Kč / 1 440 Kč pár</td>-->
+<!--                        </tr>-->
+<!--                    }-->
+<!--                    </tbody>-->
+<!--                </table>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--    </div>-->
 </div>
