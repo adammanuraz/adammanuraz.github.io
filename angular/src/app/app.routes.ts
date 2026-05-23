@@ -3,18 +3,10 @@ import {HomePage} from "./path-homepages/home-page/home-page";
 import {AumMeditation} from "./meditations/aum-meditation/aum-meditation";
 import {LivingMeditations} from "./meditations/living-meditations/living-meditations";
 import {Events} from "./events/events";
-import {ShadowPath} from "./path-homepages/shadow-path/shadow-path";
-import {TantraPath} from "./path-homepages/tantra-path/tantra-path";
-import {EnergyPath} from "./path-homepages/energy-path/energy-path";
-import {ElementsPath} from "./path-homepages/elements-path/elements-path";
 import {Manu} from "./about-us/manu/manu";
 import {Hakima} from "./about-us/hakima/hakima";
 import {Massages} from "./massages/massages";
 import {Meditations} from "./meditations/meditations";
-import {DominantMassageMan} from "./massages/dominant-massage-man/dominant-massage-man";
-import {DominantMassageWoman} from "./massages/dominant-massage-woman/dominant-massage-woman";
-import {TantraMassageMan} from "./massages/tantra-massage-man/tantra-massage-man";
-import {TantraMassageWoman} from "./massages/tantra-massage-woman/tantra-massage-woman";
 import {ShamanicMasssage} from "./massages/shamanic-masssage/shamanic-masssage";
 import {LivingMasssage} from "./massages/living-masssage/living-masssage";
 import {AboutLivingPath} from "./about-living-path/about-living-path";
@@ -33,6 +25,8 @@ import {FourHandTantraMassage} from "./massages/four-hand-tantra-massage/four-ha
 import {FourHandDominantMassage} from "./massages/four-hand-dominant-massage/four-hand-dominant-massage";
 import {DeArmouringMassage} from "./massages/de-armouring-massage/de-armouring-massage";
 import {ShibariSession} from "./massages/shibari-session/shibari-session";
+import {DominantMassage} from "./massages/dominant-massage/dominant-massage";
+import {TantraMassage} from "./massages/tantra-massage/tantra-massage";
 
 export const routes: Routes = [
     {
@@ -130,12 +124,8 @@ export const routes: Routes = [
                 component: Events
             },
             {
-                path: 'dominant-massage-man',
-                component: DominantMassageMan
-            },
-            {
-                path: 'dominant-massage-woman',
-                component: DominantMassageWoman
+                path: 'dominant-massage',
+                component: DominantMassage
             },
             {
                 path: 'couple-dominant-massage',
@@ -180,12 +170,8 @@ export const routes: Routes = [
                 component: Events
             },
             {
-                path: 'tantra-massage-man',
-                component: TantraMassageMan
-            },
-            {
-                path: 'tantra-massage-woman',
-                component: TantraMassageWoman
+                path: 'tantra-massage',
+                component: TantraMassage
             },
             {
                 path: 'couple-tantra-massage',

@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
     RouterLink
   ],
   templateUrl: './shibari-session.html',
-  styleUrl: '../tantra-massage-man/tantra-massage-man.scss'
+  styleUrl: '../tantra-massage-man/tantra-massage.scss'
 })
 export class ShibariSession implements OnDestroy {
   protected path = '';

@@ -4,15 +4,15 @@ import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-dominant-massage-man',
+  selector: 'app-dominant-massage',
     imports: [
         NavigationBar,
         RouterLink
     ],
-  templateUrl: './dominant-massage-man.html',
-  styleUrl: './dominant-massage-man.scss'
+  templateUrl: './dominant-massage.html',
+  styleUrl: './dominant-massage.scss'
 })
-export class DominantMassageMan {
+export class DominantMassage {
     protected path = '';
 
     private activatedRoute = inject(ActivatedRoute);

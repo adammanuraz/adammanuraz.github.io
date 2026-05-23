@@ -4,15 +4,15 @@ import {ActivatedRoute, RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-dominant-massage-woman',
+  selector: 'app-tantra-massage',
   imports: [
     NavigationBar,
     RouterLink
   ],
-  templateUrl: './dominant-massage-woman.html',
-  styleUrl: './dominant-massage-woman.scss'
+  templateUrl: './tantra-massage.html',
+  styleUrl: './tantra-massage.scss'
 })
-export class DominantMassageWoman {
+export class TantraMassage {
   protected path = '';
 
   private activatedRoute = inject(ActivatedRoute);
