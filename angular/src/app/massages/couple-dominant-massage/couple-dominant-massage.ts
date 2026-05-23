@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
     RouterLink
   ],
   templateUrl: './couple-dominant-massage.html',
-  styleUrl: '../tantra-massage-man/tantra-massage.scss'
+  styleUrl: '../tantra-massage/tantra-massage.scss'
 })
 export class CoupleDominantMassage implements OnDestroy {
   protected path = '';
