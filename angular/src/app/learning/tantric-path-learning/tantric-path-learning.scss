@@ -12,6 +12,52 @@
   }
 }
 
+.reservation-button {
+  display: inline-block;
+  margin: 0.4rem 0 1.6rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+  }
+
+  &:visited {
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline-offset: 3px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.reservation-button--tantra {
+  border: 1px solid $accent-color-tantra;
+  background: linear-gradient(135deg, $primary-color-tantra 0%, $accent-color-tantra 100%);
+  box-shadow: 0 0.45rem 1.1rem rgba(96, 26, 34, 0.22);
+
+  &:hover,
+  &:focus-visible {
+    border-color: $primary-color-tantra;
+    background: linear-gradient(135deg, #E85A4F 0%, $primary-color-tantra 100%);
+    box-shadow: 0 0.55rem 1.25rem rgba(178, 58, 72, 0.28);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(232, 90, 79, 0.4);
+  }
+}
+
 .price-list {
   margin: 2rem 0;
 
