@@ -35,20 +35,12 @@
         <p>
             Případně můžeš rovnou využít online rezervaci:
         </p>
-        <button class="tantra-reservio-button" type="button" (click)="openReservationModal()">
+        <a class="tantra-reservio-button"
+           href="https://manumi-razovi.reservio.com/?ssq=Tantrick%C3%A1+mas%C3%A1%C5%BE"
+           target="_blank"
+           rel="noopener noreferrer">
             Vytvořit rezervaci
-        </button>
-
-        @if (isReservationModalOpen) {
-            <div class="reservation-modal-backdrop" (click)="closeReservationModal()">
-                <div class="reservation-modal" role="dialog" aria-modal="true" aria-label="Online rezervace" (click)="$event.stopPropagation()">
-                    <button class="reservation-modal-close" type="button" aria-label="Zavřít rezervaci" (click)="closeReservationModal()">
-                        ×
-                    </button>
-                    <iframe src="https://manumi-razovi.reservio.com/services?ssq=Tantrick%C3%A1+mas%C3%A1%C5%BE" width="800px" height="500px" frameborder="0" title="Online rezervace"></iframe>
-                </div>
-            </div>
-        }
+        </a>
 
         <section class="price-list" aria-labelledby="dominant-massage-man-price-list">
             <h2 id="dominant-massage-man-price-list">Ceník</h2>
